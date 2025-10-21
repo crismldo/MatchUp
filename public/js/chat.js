@@ -8,7 +8,6 @@ const miId = Number(usuario.id);
 const chatMenu = document.getElementById('chatMenu');
 const contenedor = document.getElementById('contenedorMensajes');
 const headerUsuario = document.getElementById('datos-usuario-H');
-const btnNuevoChat = document.getElementById('btnNuevoChat');
 
 const SERVER_URL = "https://matchup-production.up.railway.app";
 
@@ -26,7 +25,7 @@ socket.on('nuevo-mensaje', (data) => {
         (data.emisor_id === chatActivoId && data.receptor_id === miId) ||
         (data.emisor_id === miId && data.receptor_id === chatActivoId);
 
-    if (!esChatActual) return; //si el mensaje no corresponde al chat activo, ignorar
+    if (!esChatActual) return; // ❌ si el mensaje no corresponde al chat activo, ignorar
 
     // ✅ Mostrar solo si pertenece al chat activo
     if (data.receptor_id === miId) {
@@ -46,11 +45,6 @@ socket.on('actualizar-chats', (data) => {
 //CARGAR LOS CHATS
 document.addEventListener('DOMContentLoaded', () => {
     actualizarListaDeChats(miId);
-});
-
-//CREAR UN NUEVO CHAT
-btnNuevoChat.addEventListener('click', () => {
-    mostrarSelectorDeUsuarios(); // Función que muestra lista de usuarios
 });
 
 //ENVIAR UN MENSAJE
@@ -155,46 +149,3 @@ function actualizarListaDeChats(miId) {
         .catch(err => console.error('Error al actualizar chats:', err));
 }
 
-function mostrarSelectorDeUsuarios() {
-    fetch(`/usuariosSinChat/${miId}`)
-        .then(res => res.json())
-        .then(usuarios => {
-            const div = document.createElement('div');
-            div.id = 'selectorUsuarios';
-            div.innerHTML = usuarios.map(u => `
-                <div class="usuario" data-id="${u.id}">
-                    <img src="uploadd/${u.foto}" alt="${u.username}" width="30">
-                    ${u.username}
-                </div>
-            `).join('');
-            document.body.appendChild(div);
-
-            document.querySelectorAll('#selectorUsuarios .usuario').forEach(el => {
-                el.addEventListener('click', () => {
-                    const usuario = {
-                        id: el.dataset.id,
-                        username: el.dataset.username,
-                        foto: el.dataset.foto
-                    };
-                    iniciarChat(usuario);
-                    div.remove();
-                });
-            });
-        });
-}
-
-function iniciarChat(usuario) {
-    chatActivoId = usuario.username;
-
-    inputMensaje.disabled = false;
-
-    headerUsuario.innerHTML = `
-            <img src="uploads/${usuario.foto || 'uploads/default.png'}">
-                <span>
-                <h1>${usuario.username}</h1>
-                <p>En linea</p>
-                </span>
-            `;
-    // Limpiar contenedor de mensajes
-    contenedor.innerHTML = '';
-}
