@@ -8,8 +8,12 @@ const chatMenu = document.getElementById('chatMenu');
 const contenedor = document.getElementById('contenedorMensajes');
 const headerUsuario = document.getElementById('datos-usuario-H');
 
+const SERVER_URL = "https://matchup-production.up.railway.app";
+
 // Conectar al servidor y enviar miId
-const socket = io({ query: { usuarioId: miId } });
+const socket = io(SERVER_URL, { 
+  query: { usuarioId: miId }
+});
 
 //ESCUCHAR MENSAJES EN TIEMPO REAL
 socket.on('nuevo-mensaje', (data) => {
