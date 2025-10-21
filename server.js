@@ -119,6 +119,18 @@ app.post('/enviar-mensaje', (req, res) => {
     });
 });
 
+//CREAR NUEVO CHAT
+app.get('/usuariosSinChat/:miId', (req, res) => {
+    const miId = req.params.miId;
+
+    db.query('CALL usuariosSinChat(?)', [miId], (err, results) => {
+        if (err) {
+            console.error('Error al llamar al procedure:', err);
+            return res.status(500).json({ error: err.message });
+        }
+        res.json(results[0]); // resultados del procedure
+    });
+});
 
 // Configuración de Socket.io
 io.on('connection', (socket) => {
