@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de sesión</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="css/inicioSesion.css"/>
+  <div class="navbar">
+         <div class="logo">
+      <img src="assets/iconos/logo.png" />
+      <a href="pantallaInicio.html"><h2>MatchUp</h2></a>
+    </div>
+  </div>
+
+</head>
+<body>
+  
+  <div class="login">
+    <h2>INICIAR SESION</h2>
+
+    <form class="login-form" id="form-login">
+      <div class="textbox">
+        <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" required />
+      </div>
+
+      <div class="textbox">
+        <input type="password" name="contra" placeholder="Contraseña" required />
+      </div>
+
+      <input type="submit" value="INGRESAR" />
+      <p class="registro">¿Aun no tienes cuenta? <a href="registro.html">Registrate</a></p>
+    </form>
+  </div>
+
+  <script>
+      const formLogin = document.getElementById('form-login');
+      
+      formLogin.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(formLogin);
+          const datos = Object.fromEntries(formData.entries());
+
+          try {
+              const res = await fetch('/login', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(datos)
+              });
+
+              if (res.ok) {
+                  const usuario = await res.json(); //recibir JSON con info del usuario
+                  localStorage.setItem('usuario', JSON.stringify(usuario)); // guardar sesión
+
+                  setTimeout(() => {
+                      window.location.href = 'pantallaInicio.html';
+                  }, 1000);
+              } else {
+                  const errorText = await res.text();
+                  console.log(errorText);
+              }
+          } catch (error) {
+              console.error('Error:', error);
+          }
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/iconos/logo.png"/>
+            <a href="pantallaInicio.html"><h2>MatchUp</h2></a>
+        </div>
+    </nav>
+    <div class="borde-contenedor">
+        <div class="contenedor">
+            <h1>REGISTRARSE</h1>
+            <form id="form-registro">
+                <div class="informacion">
+                    <span class="escribir-datos">
+                        <label>Nombre de usuario</label>
+                        <input type="text" name="nombreUsuario" required>
+
+                        <label>Correo electronico</label>
+                        <input type="text" name="correo" required>
+
+                        <label>Contraseña</label>
+                        <input type="text" name="contra" required>
+                    </span>
+                    <span class="cargar-foto">
+                        <img class="foto-perf" src="uploads/default.png">
+                        <label for="foto-user">Seleccionar archivo</label>
+                        <input type="file" id="foto-user" hidden name="fotoPerfil">
+                    </span>
+                </div>
+                <button type="submit">REGISTRARSE</button>
+                <p id="mensaje"></p>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="inicioSesion.html">Inicia sesion</a></p>
+        </div>
+    </div>
+    
+    <script>
+        //MOSTRAR LA FOTO EN PANTALLA
+
+        const inputFoto = document.getElementById('foto-user');
+        const imgPerfil = document.querySelector('.foto-perf');
+
+        inputFoto.addEventListener('change', () => {
+        const file = inputFoto.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.onload = e => {
+            imgPerfil.src = e.target.result; // actualiza la imagen
+            }
+            reader.readAsDataURL(file); // convierte a base64 para mostrarla
+        }
+        });
+
+        //ENVIAR FORM
+        const form = document.getElementById('form-registro');
+        const mensaje = document.getElementById('mensaje');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form); // incluye el archivo
+            const res = await fetch('/registro', {
+                method: 'POST',
+                body: formData // enviamos como multipart/form-data
+            });
+            const resultado = await res.text();
+
+            if (resultado.includes('correctamente')) {
+                window.location.href = 'inicioSesion.html';
+            } else {
+                document.getElementById('mensaje').textContent = resultado;
+            }
+        });
+
+    </script>
+
+</body>
+</html>

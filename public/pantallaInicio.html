@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/pantallaInicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <nav class="navbar">
+    <div class="logo">
+      <img src="assets/iconos/logo.png" />
+      <h2>MatchUp</h2>
+    </div>
+    <div class="UsuarioNombre">
+      <a href="InicioSesion.html" class="login">INICIAR SESION</a>
+      <a href="registro.html" class="RegistroButton">REGISTRARSE</a>
+    </div>
+  </nav>
+
+  <div id="main">
+    <!-- Sidebar -->
+    <span class="sidebar">
+            <div class="categoria selected-cat">
+                <img src="assets/iconos/home.png">
+                <a href="pantallaInicio-usr.html">Inicio</a>
+            </div>
+            <div class="categoria">
+                <img src="assets/iconos/comment.png">
+                <a href="chat.html">Chats</a>
+            </div>
+            <div class="categoria">
+                <img src="assets/iconos/trophy.png">
+                <a href="pantallaInicio.html">Mis torneos</a>
+            </div>
+            <div class="categoria">
+                <img src="assets/iconos/whistle.png">
+                <a href="pantallaTorneo.html">En juego</a>
+            </div>
+        </span>
+
+    <!-- Contenido -->
+    <div class="content">
+      <div class="ordenar">
+        <span>Mostrar</span>
+        <select>
+          <option>Todos</option>
+          <option>En vivo</option>
+          <option>Finalizados</option>
+        </select>
+      </div>
+
+      <div class="cards">
+        <!-- Card En Vivo -->
+        <div class="card">
+          <div class="card-img">
+            <img src="https://services.meteored.com/img/article/argentina-vs-francia-las-matematicas-predicen-al-campeon-del-mundo-qatar-messi-mundial-mbappe-1671264391907_1280.jpg" alt="partido">
+            <span class="status live">LIVE</span>
+          </div>
+          <div class="card-body">
+            <p class="title">FASE FINAL:</p>
+            <h3>Argentina vs Francia</h3>
+            <small class="reward">Recompensas disponibles</small>
+            <button class="btn">Ver ahora</button>
+          </div>
+        </div>
+
+        <!-- Card Finalizado -->
+        <div class="card">
+          <div class="card-img">
+            <img src="https://services.meteored.com/img/article/argentina-vs-francia-las-matematicas-predicen-al-campeon-del-mundo-qatar-messi-mundial-mbappe-1671264391907_1280.jpg" alt="partido">
+            <span class="status ended">FINALIZADO</span>
+          </div>
+          <div class="card-body">
+            <p class="title">FASE FINAL:</p>
+            <h3>Argentina vs Francia</h3>
+            <small class="time">23:12</small>
+            <button class="btn">Resultados</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/navbar.js"></script>
+</body>
+</html>

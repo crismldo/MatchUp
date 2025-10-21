@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Perfil</title>
+
+    <link rel="stylesheet" href="css/perfil-usuario.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/iconos/logo.png"/>
+            <a href="pantallaInicio.html"><h2>MatchUp</h2></a>
+        </div>
+    </nav>
+
+    <div id="main">
+        <span class="sidebar">
+            <div><img src="assets/iconos/home.png"></div>
+            <div><img src="assets/iconos/comment.png"></div>
+            <div><img src="assets/iconos/trophy.png"></div>
+            <div><img src="assets/iconos/whistle.png"></div>
+        </span>
+        
+        <div class="perfil">
+            <div class="foto-nombre">
+                <img src="assets/iconos/user-purple.png" class="foto-perfil">
+                <span>
+                    <h2>USUARIO</h2>
+                    <div class="estrellas">
+                        <img src="assets/iconos/star.png">
+                        <img src="assets/iconos/star.png">
+                        <img src="assets/iconos/star.png">
+                    </div>
+                </span>
+            </div>
+
+            <div class="marcos">
+                <div class="selected-frame"><img src="assets/iconos/frame-green.png"></div>
+                <div><img src="assets/iconos/frame-orange.png"></div>
+                <div><img src="assets/iconos/frame-white.png"></div>
+                <div><img src="assets/iconos/frame-purple.png"></div>
+            </div>
+            <div class="datos-usuario">
+                <div class="puntos">
+                    <img src="assets/iconos/points-white.png">
+                    <p>450 Puntos</p>
+                </div>
+                <form>
+                    <label>Correo electronico
+                        <img src="assets/iconos/edit.png">
+                    </label>
+                    <input type="Text" placeholder="usuario003@gmail.com">
+                    <label>Contraseña
+                        <img src="assets/iconos/edit.png">
+                    </label>
+                    <input type="password" placeholder="contrasena">
+                </form>
+
+                <button type="button" id="logout">Cerrar sesion</button>
+
+            </div>
+        </div>
+        <div class="torneos">
+            <h1>MIS TORNEOS</h1>
+            <div class="ordenar">
+                <p>Mostrar</p>
+                <select>
+                    <option>Todos</option>
+                    <option>Activos</option>
+                    <option>Finalizados</option>
+                </select>
+            </div>
+            <div class="cards">
+          <!-- Card En Vivo -->
+          <div class="card">
+            <div class="card-img">
+              <img src="https://services.meteored.com/img/article/argentina-vs-francia-las-matematicas-predicen-al-campeon-del-mundo-qatar-messi-mundial-mbappe-1671264391907_1280.jpg" alt="partido">
+              <span class="status live">LIVE</span>
+            </div>
+            <div class="card-body">
+              <p class="title">FASE FINAL:</p>
+              <h3>Argentina vs Francia</h3>
+              <small class="reward">Recompensas disponibles</small>
+              <button class="btn">Ver ahora</button>
+            </div>
+          </div>
+
+          <!-- Card Finalizado -->
+          <div class="card">
+            <div class="card-img">
+              <img src="https://services.meteored.com/img/article/argentina-vs-francia-las-matematicas-predicen-al-campeon-del-mundo-qatar-messi-mundial-mbappe-1671264391907_1280.jpg" alt="partido">
+              <span class="status ended">FINALIZADO</span>
+            </div>
+            <div class="card-body">
+              <p class="title">FASE FINAL:</p>
+              <h3>Argentina vs Francia</h3>
+              <small class="time">23:12</small>
+              <button class="btn">Resultados</button>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const btnCerrarSesion = document.getElementById('logout');
+
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener('click', () => {
+            // Eliminar todos los datos guardados del usuario
+            localStorage.removeItem('usuario'); 
+
+            // Redirigir al inicio
+            window.location.href = 'pantallaInicio.html';
+            });
+        }
+        });
+
+    </script>
+</body>
+</html>

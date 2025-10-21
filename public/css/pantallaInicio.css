@@ -1,0 +1,277 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #201E1F;
+    border-bottom: 3px solid #FE572A;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.logo img {
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+}
+  
+.logo a{
+    color: #FE572A;
+    text-decoration: none;
+}
+
+.UsuarioNombre {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .UsuarioNombre .login {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .RegistroButton {
+    background: #5a3fc0; 
+    color: #111;   
+    padding: 8px 22px;
+    margin-right: 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #5a3fc0; 
+    transition: all 0.3s;
+  }
+  
+  .RegistroButton:hover {
+    background: #5a3fc0;
+    color: #fff;
+  }
+
+
+.usuario-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario-navbar img{
+  border-radius: 100%;
+    margin-right: 25px;
+    width: 40px;
+}
+
+.nombre-usuario{
+  margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nombre-usuario a{
+  text-decoration: none;
+  text-align: right;
+}
+.nombre-usuario h1{
+    font-size: 20px;
+    color: #F3F0EB;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.estrellas{
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.estrellas img{
+  margin: 2px;
+  width: 15px;
+}
+
+/* Layout */
+#main{
+    padding: 30px 40px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 15px;
+    margin-top: 70px;
+    padding: 20px 20px 20px 0px;
+    background-color: #353333;
+    height: 100%;
+}
+
+.categoria{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px 10px 30px;
+  transition: 0.3s;
+
+}
+.categoria img{
+  width: 30px;
+}
+.categoria a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #F3F0EB;
+  margin-left: 10px;
+}
+.selected-cat, .categoria:hover{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #201E1F;
+}
+.selected-cat a, .categoria a:hover{
+  color: #6E6D6D;
+}
+
+/* Contenido */
+.content {
+  margin-right: 200px;
+  flex: 1;
+  padding: 20px;
+}
+
+.ordenar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.ordenar select {
+  background: #2a2a2a;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Cards */
+.cards {
+  background-color: #353333;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.live {
+  background: red;
+}
+
+.ended {
+  background: gray;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 5px 0 10px;
+}
+
+.time {
+    color: #6E6D6D;
+
+}
+
+.reward {
+  color: #FE572A;
+  font-size: 0.85rem;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #FE572A;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: #201E1F;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #FE572A;
+}
+
+/*
+PALETA DE COLORES
+NEGRO 201E1F
+GRIS 353333
+GRIS CLARO 6E6D6D
+BLANCO F3F0EB
+VERDE DAFF02
+NARANJA FE572A
+MORADO 685BC7
+*/

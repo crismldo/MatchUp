@@ -1,0 +1,156 @@
+body{
+    background-image: url("../assets/imagenes/background-1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-color: #201E1F;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #201E1F;
+    border-bottom: 3px solid #FE572A;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FE572A;
+}
+.logo a{
+    color: #FE572A;
+    text-decoration: none;
+}
+
+.logo img {
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+}
+  
+.logo h2 {
+    font-size: 20px;
+}
+
+.borde-contenedor{
+    background-color: #d9ff026e;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.contenedor{
+    background-color: #201E1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+    border-radius: 20px;
+}
+
+.contenedor h1{
+    color: #FE572A;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.escribir-datos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    color: #F3F0EB;
+    margin-right: 30px;
+}
+.escribir-datos input{
+    background-color: #353333;
+    font-size: 20px;
+    color: #F3F0EB;
+    height: 35px;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 20px;
+}
+.escribir-datos input:focus{
+    outline: none;
+}
+
+.cargar-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cargar-foto img{
+    border-radius: 100%;
+    margin-bottom: 20px;
+    width: 150px;
+}
+.cargar-foto label{
+    font-size: 20px;
+    padding: 8px 16px;
+    background-color: #685BC7;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+form button{
+    background-color: #FE572A;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #201E1F;
+    margin: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+form button:hover{
+    background-color: #DAFF02;
+}
+
+.contenedor p{
+    font-size: 18px;
+    color: #F3F0EB;
+    margin: 5px;
+}
+.contenedor a{
+    color: #DAFF02;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contenedor a:hover{
+    color: #FE572A;
+}
+
+/*
+PALETA DE COLORES
+NEGRO 201E1F
+GRIS 353333
+GRIS CLARO 6E6D6D
+BLANCO F3F0EB
+VERDE DAFF02
+NARANJA FE572A
+MORADO 685BC7
+*/

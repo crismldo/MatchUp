@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/iconos/logo.png"/>
+            <a href="pantallaInicio-usr.html"><h2>MatchUp</h2></a>
+        </div>
+        <div class="usuario-navbar">
+            <span class="nombre-usuario">
+                    <a href="perfil-usuario.html"><h1>USUARIO</h1></a>
+                    <div class="estrellas">
+                        <img src="assets/iconos/star.png">
+                        <img src="assets/iconos/star.png">
+                        <img src="assets/iconos/star.png">
+                    </div>
+            </span>
+            <a href="perfil-usuario.html"><img src="assets/iconos/user-purple.png"></a>
+        </div>
+    </nav>
+
+    <div id="main">
+
+        <span class="sidebar">
+            <div>
+                <a href="pantallaInicio-usr.html"><img src="assets/iconos/home.png"></a>
+            </div>
+            <div class="selected-cat">
+                <a href="chat.html"><img src="assets/iconos/comment.png"></a>
+            </div>
+            <div>
+                <a href="pantallaInicio.html"><img src="assets/iconos/trophy.png"></a>
+            </div>
+            <div>
+                <a href="pantallaTorneo.html"><img src="assets/iconos/whistle.png"></a>
+            </div>
+        </span>
+
+        <span class="contenedor">
+            <span class="side-chats">
+                <div class="opciones">
+                    <img src="assets/iconos/plus.png">
+                    <img src="assets/iconos/create-group.png">
+                </div>
+                <div class="chat-individual">
+                    <img src="assets/iconos/user-green.png">
+                    <span>
+                        <h1>USUARIO</h1>
+                        <p>Mensaje...</p>
+                    </span>
+                    <p class="msjs-nuevos">3</p>
+                </div>
+                <div class="chat-individual selected-chat">
+                    <img src="assets/iconos/user-orange.png">
+                    <span>
+                        <h1>USUARIO</h1>
+                        <p>Mensaje...</p>
+                    </span>
+                </div>
+                <div class="chat-grupal">
+                    <span class="avatars">
+                        <img src="assets/iconos/user-purple.png">
+                        <img src="assets/iconos/user-green.png">
+                    </span>
+                    <span>
+                        <h1>GRUPO 1</h1>
+                        <p>Mensaje...</p>
+                    </span>
+                </div>
+            </span>
+
+            <span class="mensajes-individual">
+                <div class="header">
+                    <span class="datos-usuario">
+                        <img src="assets/iconos/user-orange.png">
+                        <span>
+                            <h1>USUARIO</h1>
+                            <p>En linea</p>
+                        </span>
+                    </span>
+                    <span class="header-opciones">
+                        <img src="assets/iconos/lock-closed.png">
+                        <img src="assets/iconos/email.png">
+                        <img src="assets/iconos/videochat.png">
+                    </span>
+                </div>
+                <div class="single-chat">
+                    <div class="contenedor-mensajes">
+                        <div class="recived">
+                            <img src="assets/iconos/message-green.png">
+                            <span>Hola, que tal?</span>
+                        </div>
+                        <div class="sent">
+                            <img src="assets/iconos/message-black.png">
+                            <span>Muy bien, y tu?</span>
+                        </div>  
+                    </div>
+                    <div class="escribir-msj">
+                        <img src="assets/iconos/plus.png">
+                        <img src="assets/iconos/sticker.png">
+                        <input type="text" placeholder="Escribe un mensaje...">
+                        <img src="assets/iconos/microphone.png">
+                    </div>
+                </div>
+            </span>
+        </span>
+
+    </div>
+    
+
+</body>
+</html>

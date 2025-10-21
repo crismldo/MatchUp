@@ -1,0 +1,129 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #00ffd5, #d9ff00, #00ff75, #d9ff00);
+  background-size: 200% 200%;
+  animation: fondoMove 8s infinite alternate;
+}
+
+.logo a{
+    color: #FE572A;
+    text-decoration: none;
+}
+
+@keyframes fondoMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.login {
+  background-color: #1a1a1a; 
+  color: #d9ff00; 
+  padding: 40px 30px;
+  margin-top: 100px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+
+
+.login h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.textbox {
+  margin-bottom: 20px;
+}
+.textbox input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+.textbox input::placeholder {
+  color: #bbb;
+}
+
+
+input[type="submit"] {
+  background-color: #d9ff00;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+input[type="submit"]:hover {
+  background-color: #c4e600;
+}
+
+
+.registro {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 15px;
+}
+.registro a {
+  color: #ff3b1f; 
+  font-weight: 600;
+  text-decoration: none;
+}
+.registro a:hover {
+  text-decoration: underline;
+}
+
+  
+.navbar {
+     position: fixed;    
+  top: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #111; 
+    border-bottom: 3px solid #ff4500; 
+  }
+  
+  .logo {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff4500; 
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  

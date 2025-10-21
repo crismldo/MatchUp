@@ -1,0 +1,227 @@
+/* General */
+body {
+  margin: 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background: #111; 
+  border-bottom: 2px solid #d62828; 
+}
+
+/* Logo */
+.logo {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff4500; 
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+.logo h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.logo a{
+  text-decoration: none;
+  color: #ff4500; 
+}
+
+/* Usuario */
+.UsuarioNombre {
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.UsuarioNombre .login {
+  color: #fff; 
+  text-decoration: none;
+  font-weight: 600;
+}
+.RegistroButton {
+  background: #5a3fc0; 
+  color: #111;   
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #5a3fc0; 
+  transition: all 0.3s;
+}
+.RegistroButton:hover {
+  background: #5a3fc0;
+  color: #fff;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  display: grid;
+  grid-template-columns: 70px 1fr 280px; /* sidebar | main | predicciones */
+  gap: 25px;
+  max-width: 93%;
+  margin: 27px auto;
+  padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  border-radius: 15px;
+  padding: 15px 0;
+  background-color: #353333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: fit-content;
+}
+.sidebar img {
+  display: block;
+  width: 35px;
+  margin: 10px 0;
+  padding: 5px;
+}
+.selected-cat {
+  background-color: #201E1F;
+  border-radius: 10px;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.card {
+  background: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 98%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.card-img {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  padding: 15px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fase {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.live {
+  background: #201E1F;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 12px;
+  color:#FE572A;
+}
+.match {
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Predicciones */
+.predicciones {
+  width: 260px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-self: flex-start;
+}
+.subtitulo {
+  color: #aaa;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.opcion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a3a3a;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.opcion input {
+  display: none;
+}
+.percent {
+  font-size: 12px;
+  color: #aaa;
+}
+.precio {
+  text-align: center;
+  color: #FE572A;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.btn {
+  background: #FE572A;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: #201E1F;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #FE572A;
+}
+
+/* Puntos */
+.puntos {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2a2a2a;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  justify-content: center;
+}
+.dot {
+  color: #FE572A;
+  margin-right: 6px;
+}
+
+.icono-moneda {
+  width: 18px;   /* tamaño de la imagen */
+  height: 18px;  /* la puedes ajustar */
+  vertical-align: middle; /* centra con el texto */
+  margin-right: 5px;      /* separa del número */
+}

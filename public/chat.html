@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <nav class="navbar">
+    </nav>
+
+    <div id="main">
+
+        <span class="sidebar">
+            <div>
+                <a href="pantallaInicio-usr.html"><img src="assets/iconos/home.png"></a>
+            </div>
+            <div class="selected-cat">
+                <a href="chat.html"><img src="assets/iconos/comment.png"></a>
+            </div>
+            <div>
+                <a href="pantallaInicio.html"><img src="assets/iconos/trophy.png"></a>
+            </div>
+            <div>
+                <a href="pantallaTorneo.html"><img src="assets/iconos/whistle.png"></a>
+            </div>
+        </span>
+
+        <span class="contenedor">
+            <span class="side-chats">
+                <div class="opciones">
+                    <img src="assets/iconos/plus.png">
+                    <img src="assets/iconos/create-group.png">
+                </div>
+                <div id="chatMenu"></div>
+            </span>
+
+            <span class="mensajes-individual">
+
+                <div class="header">
+                    <span class="datos-usuario" id="datos-usuario-H"></span>
+                    
+                    <span class="header-opciones">
+                        <img src="assets/iconos/lock-closed.png">
+                        <img src="assets/iconos/email.png">
+                        <img src="assets/iconos/videochat.png">
+                    </span>
+                </div>
+
+                <div class="single-chat">
+
+                    <div class="contenedor-mensajes" id="contenedorMensajes"></div>
+
+                    <div class="escribir-msj">
+                        <img src="assets/iconos/plus.png">
+                        <img src="assets/iconos/sticker.png">
+                        <input type="text" id="inputMensaje" placeholder="Escribe un mensaje..." disabled>
+                        <img src="assets/iconos/microphone.png">
+                    </div>
+                </div>
+            </span>
+        </span>
+
+    </div>
+    
+    <script src="js/navbar.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

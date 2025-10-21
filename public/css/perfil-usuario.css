@@ -1,0 +1,304 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-color: #201E1F;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #201E1F;
+    border-bottom: 3px solid #FE572A;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FE572A;
+}
+  
+.logo img {
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+}
+  
+.logo h2 {
+    font-size: 20px;
+}
+.logo a{
+    color: #FE572A;
+    text-decoration: none;
+}
+
+#main{
+    padding: 20px 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar{
+    border-radius: 15px;
+    padding: 10px 6px 10px 0px;
+    background-color: #353333;
+    
+    height: 100%;
+}
+.sidebar img{
+    display: block;
+    width: 35px;
+    margin-top: 5px;
+    padding: 5px 10px 5px 16px;
+}
+
+.perfil{
+    background-color: #353333;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.foto-nombre{
+    color: #F3F0EB;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.foto-perfil{
+    border: 10px solid #DAFF02;
+    border-radius: 100%;
+    height: 120px;
+    margin-right: 20px;
+}
+.foto-nombre h2{
+    margin: 0px ;
+}
+.estrellas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.estrellas img{
+    height: 25px;
+    width: 25px;
+}
+
+.marcos{
+    background-color: #484645;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 300px;
+    justify-content: space-evenly;
+}
+.marcos div{
+    border-radius: 15px;
+    padding: 6px;
+    cursor: pointer;
+}
+.marcos img{
+    width: 50px;
+}
+.selected-frame{
+    background-color: #595755;
+}
+
+.datos-usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.puntos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #F3F0EB;
+    font-size: 20px;
+    background-color: #685BC7;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 150px;
+}
+.puntos img{
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+}
+.puntos p{
+    margin: 0px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 300px;
+    gap: 10px;
+    margin-top: 30px;
+}
+form label{
+    font-size: 20px;
+    text-align: left;
+    color: #F3F0EB;
+}
+form label img{
+    width: 20px;
+}
+form input{
+    background-color: #484645;
+    color: #F3F0EB;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+form input:focus{
+    outline: none;
+}
+
+.torneos{
+    color: #F3F0EB;
+}
+.ordenar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.ordenar select {
+  background: #2a2a2a;
+  border: none;
+  padding: 6px 10px;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Cards */
+.cards {
+  background-color: #353333;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.live {
+  background: red;
+}
+
+.ended {
+  background: gray;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 5px 0 10px;
+}
+
+.time {
+    color: #6E6D6D;
+
+}
+
+.reward {
+  color: #FE572A;
+  font-size: 0.85rem;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #FE572A;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: #201E1F;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #FE572A;
+}
+
+#logout{
+  background-color: #FE572A;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #201E1F;
+    margin: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#logout:hover{
+  background-color: #DAFF02;
+}
+/*
+PALETA DE COLORES
+NEGRO 201E1F
+GRIS 353333
+GRIS CLARO 6E6D6D
+BLANCO F3F0EB
+VERDE DAFF02
+NARANJA FE572A
+MORADO 685BC7
+*/

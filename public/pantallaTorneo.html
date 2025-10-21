@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pantalla Torneo</title>
+  <link rel="stylesheet" href="css/pantallaTorneo.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/iconos/logo.png" />
+      <a href="pantallaInicio-usr.html"><h2>MatchUp</h2></a>
+    </div>
+    <div class="UsuarioNombre">
+      <a href="InicioSesion.html" class="login">INICIAR SESION</a>
+      <a href="Registro.html" class="RegistroButton">REGISTRARSE</a>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <!-- SIDEBAR -->
+    <span class="sidebar">
+      <div><a href="pantallaInicio-usr.html"><img src="assets/iconos/home.png"></a></div>
+      <div><a href="chat.html"><img src="assets/iconos/comment.png"></a></div>
+      <div class="selected-cat"> <a href="pantallaInicio-usr.html"><img src="assets/iconos/trophy.png"></a></div>
+      <div><a href="pantallaTorneo.html"><img src="assets/iconos/whistle.png"></a></div>
+    </span>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <div class="card">
+        <img src="assets/imagenes/partido.png" alt="Partido" class="card-img">
+         <!-- <iframe src="https://www.youtube.com/watch?v=OrrjrTWdPTY"  width="100%" title="YARGENTINA vs FRANCE 🏆 FINAL Qatar 2022 ⚽ HIGHLIGHTS and GOALS + PENALTIES" class="card-img" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        <div class="card-body">
+          <div class="card-header">
+            <p class="fase">FASE FINAL</p>
+            <span class="live">● LIVE</span>
+          </div>
+          <h2 class="match">Argentina vs Francia</h2>
+        </div>
+      </div>
+    </main>
+
+    <!-- PREDICCIONES -->
+    <aside class="predicciones">
+      <h3 class="subtitulo">Predicciones</h3>
+      <h2 class="titulo">Elige tus predicciones</h2>
+
+      <label class="opcion">
+        <input type="radio" name="prediccion">
+        <span>Argentina</span>
+        <span class="percent">0% (0)</span>
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="prediccion">
+        <span>Empate</span>
+        <span class="percent">0% (0)</span>
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="prediccion">
+        <span>Francia</span>
+        <span class="percent">0% (0)</span>
+      </label>
+
+      <p class="precio">
+        <img src="assets/iconos/points-orange.png" alt="moneda" class="icono-moneda"> 200
+        </p>
+
+      <button class="btn">Participar</button>
+    </aside>
+
+     <div class="puntos">
+    <p class="precio">
+        <img src="assets/iconos/points-orange.png" alt="moneda" class="icono-moneda"> Puntos 450
+        </p>
+  </div>
+  </div>
+
+  
+ 
+</body>
+</html>
