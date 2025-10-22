@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'pantallaInicio.html'));
 });
 
+app.get('/status', (req, res) => {
+  res.send('Servidor activo');
+});
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -156,5 +162,5 @@ io.on('connection', (socket) => {
 });
 
 // Iniciar el servidor
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
