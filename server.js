@@ -34,10 +34,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Iniciar el servidor
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
-
 //REGISTRAR USUARIO
 app.post('/registro', upload.single('fotoPerfil'), (req, res) => {
   const { nombreUsuario, correo, contra } = req.body;
@@ -151,3 +147,6 @@ io.on('connection', (socket) => {
     });
 });
 
+// Iniciar el servidor
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
