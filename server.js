@@ -15,6 +15,14 @@ const io = socketIo(server, {
 
 const db = require('./models/db');
 
+process.on('uncaughtException', err => {
+  console.error('Excepción no capturada:', err);
+});
+process.on('unhandledRejection', reason => {
+  console.error('Promesa rechazada no manejada:', reason);
+});
+
+
 // Servir los archivos estáticos de tu carpeta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
@@ -148,5 +156,5 @@ io.on('connection', (socket) => {
 });
 
 // Iniciar el servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 server.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
