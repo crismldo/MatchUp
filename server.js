@@ -75,6 +75,8 @@ app.post('/login', (req, res) => {
             return res.status(500).send('Error al validar usuario');
         }
 
+        console.log('🔹 Resultado de login:', result);
+        
         if (result[0].length > 0) {
             const usuario = result[0][0]; // { id, username, fotoPerfil }
             res.json(usuario); //devolvemos JSON
