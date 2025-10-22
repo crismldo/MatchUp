@@ -66,6 +66,7 @@ app.post('/registro', upload.single('fotoPerfil'), (req, res) => {
 //INICIAR SESION
 app.post('/login', (req, res) => {
     const { nombreUsuario, contra } = req.body;
+    console.log('🔹 Intento de login:', nombreUsuario, contra ? '(contraseña recibida)' : '(sin contraseña)');
 
     const query = `CALL validarUsuario(?, ?)`;
     db.query(query, [nombreUsuario, contra], (err, result) => {
@@ -76,7 +77,7 @@ app.post('/login', (req, res) => {
 
         if (result[0].length > 0) {
             const usuario = result[0][0]; // { id, username, fotoPerfil }
-            res.json(usuario); // ✅ devolvemos JSON
+            res.json(usuario); //devolvemos JSON
         } else {
             res.status(401).send('Usuario o contraseña incorrectos');
         }
@@ -131,7 +132,7 @@ app.post('/enviar-mensaje', (req, res) => {
 
 // Configuración de Socket.io
 io.on('connection', (socket) => {
-    console.log('🟢 Usuario conectado');
+    console.log('Usuario conectado');
 
     // Recibir el id del usuario desde el cliente al conectar
     const usuarioId = socket.handshake.query.usuarioId;

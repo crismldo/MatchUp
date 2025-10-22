@@ -25,9 +25,9 @@ socket.on('nuevo-mensaje', (data) => {
         (data.emisor_id === chatActivoId && data.receptor_id === miId) ||
         (data.emisor_id === miId && data.receptor_id === chatActivoId);
 
-    if (!esChatActual) return; // ❌ si el mensaje no corresponde al chat activo, ignorar
+    if (!esChatActual) return; //si el mensaje no corresponde al chat activo, ignorar
 
-    // ✅ Mostrar solo si pertenece al chat activo
+    //Mostrar solo si pertenece al chat activo
     if (data.receptor_id === miId) {
         agregarMensajeRecibido(data.mensaje);
     } else if (data.emisor_id === miId) {
